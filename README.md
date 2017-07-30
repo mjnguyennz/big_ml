@@ -35,8 +35,7 @@ prediction = BigML::Prediction.create(model.resource, { :input_data => { "000001
 prediction.destroy
 
 # create a script execution
-execution = BigML::Execution.create("script/597c7a3849c4a155ec0000e7", {:inputs => {"a"=> true, "b"=>false}})
-
+execution = BigML::Execution.create("script/597c7a3849c4a155ec0000e7", { :inputs => { "a"=> true, "b"=>false } })
 
 # you can destroy everything!
 BigML::Model.delete("4fe8868a035d07682f002891")
